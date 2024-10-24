@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Demo Novedades HTML, CSS, y JS 2024</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <h1>Demo Novedades HTML, CSS, y JS 2024</h1>
+    <main>
+      <div class="container">
+        <!-- HTML: Dialog Element -->
+        <div class="section">
+          <h2>Dialog Element</h2>
+          <button id="openDialog">Abrir diálogo</button>
+          <dialog id="myDialog">
+            <p>¡Este es un cuadro de diálogo nativo!</p>
+            <button id="closeDialog">Cerrar diálogo</button>
+          </dialog>
+        </div>
+
+        <!-- HTML: Declarative Shadow DOM -->
+        <div class="section">
+          <h2>Declarative Shadow DOM</h2>
+          <div id="shadow-host">
+            <template shadowrootmode="open">
+              <style>
+                p {
+                  color: #1e88e5;
+                }
+              </style>
+              <p>Contenido dentro del Shadow DOM.</p>
+            </template>
+          </div>
+        </div>
+
+        <!-- JS: Top-Level Await -->
+        <div class="section">
+          <h2>Top-Level Await</h2>
+          <p>Datos cargados desde una API:</p>
+          <div class="output" id="await-output">Cargando...</div>
+        </div>
+
+        <!-- JS: Array.groupBy() -->
+        <div class="section">
+          <h2>Array.groupBy()</h2>
+          <p>Usuarios agrupados por edad:</p>
+          <div class="output" id="groupby-output"></div>
+        </div>
+
+        <!-- JS: Temporal API -->
+        <div class="section">
+          <h2>Temporal API</h2>
+          <p>Manipulación de fechas:</p>
+          <div class="output" id="temporal-output"></div>
+        </div>
+
+        <!-- HTML: Popover (popovertarget) -->
+        <div class="section highlight">
+          <h2>Popovertarget</h2>
+          <button popovertarget="my-popover">Open Popover</button>
+
+          <div id="my-popover" popover>
+            <p>
+              I am a popover with more information. Hit <kbd>esc</kbd> or click
+              away to close me.
+            </p>
+            <p></p>
+          </div>
+        </div>
+
+        <!-- HTML: Imagen con loading y fetchpriority -->
+        <div class="section">
+          <h2>Lazy Loading y Fetchpriority</h2>
+          <img
+            src="https://via.placeholder.com/200"
+            loading="lazy"
+            fetchpriority="high"
+            alt="Ejemplo de imagen"
+          />
+          <p>Imagen con carga diferida y alta prioridad de descarga.</p>
+        </div>
+
+        <!-- Operadores de Asignación Lógica -->
+        <div class="section">
+          <h2>Operadores de Asignación Lógica</h2>
+          <p>Uso de `&&=`, `||=`, y `??=` para manejar asignaciones:</p>
+          <div class="output" id="logic-assign-output">
+            <button id="logicAssignButton">Mostrar ejemplos</button>
+            <p id="logicResult"></p>
+          </div>
+        </div>
+      </div>
+    </main>
+    <script src="./script.js" type="module"></script>
+  </body>
+</html>
